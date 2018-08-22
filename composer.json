@@ -1,0 +1,30 @@
+{
+    "name": "jameswang/vod",
+    "description": "这是阿里云点进一步封装，适用于laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "james wang",
+            "email": "wangze0218@qq.com"
+        }
+    ],
+    "require": {
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jameswang\\Vod\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Jameswang\\Vod\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jameswang\\Vod\\Test\\": "./tests"
+        }
+    }
+}
