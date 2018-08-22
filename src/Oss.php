@@ -7,7 +7,7 @@
  */
 namespace Jameswang\Vod;
 
-require_once __DIR__.'/aliyun-php-sdk/aliyun-oss-php-sdk/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use OSS\OssClient;
 use OSS\Core\OssException;

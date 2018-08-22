@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "aliyuncs/oss-sdk-php": "^2.3"
     },
     "extra": {
         "laravel": {
