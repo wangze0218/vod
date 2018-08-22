@@ -25,7 +25,20 @@ class Vod
     // $arg['description']  // 视频源文件描述(可选);
     // $arg['cover_url']    // 自定义视频封面(可选)
     // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
-    public function upload_video($arg,$localFilePath)
+    public function reserve_upload_video($arg)
+    {
+        $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret);
+        $upload_mes = $video->boot($arg);
+
+        return $upload_mes;
+    }
+
+    // $arg['title']        // 视频标题(必填参数)
+    // $arg['file_name']    // 视频源文件名称，必须包含扩展名(必填参数)
+    // $arg['description']  // 视频源文件描述(可选)
+    // $arg['cover_url']    // 自定义视频封面(可选)
+    // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
+    public function oss_upload_video($arg,$localFilePath)
     {
         $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret);
         $upload_mes = $video->boot($arg);

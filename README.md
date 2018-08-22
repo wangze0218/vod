@@ -49,8 +49,13 @@ $path = '/Users/james/Downloads/aa.mp4';
 $arg['title'] = '测试';
 $arg['file_name'] = "aa.mp4";
 
+
 $vod = new Vod($config);
-$result = $vod->upload_video($arg,$path);
+//带文件上传
+$result = $vod->oss_upload_video($arg,$path);
+
+//只获取上传凭证
+$result = $vod->reserve_upload_video($arg);
 ```
 
 ##Laravel 引入方式 
