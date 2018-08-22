@@ -1,7 +1,7 @@
 {
     "name": "jameswang/vod",
     "description": "这是阿里云点进一步封装，适用于laravel",
-    "license": "MIT",
+    "license": "stable",
     "authors": [
         {
             "name": "james wang",
