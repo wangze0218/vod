@@ -7,9 +7,9 @@
  */
 
 namespace Jameswang\Vod;
+use Jameswang\Vod\Vod;
 
-
-class ServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     protected $defer = false;
 
