@@ -67,30 +67,6 @@ config/services.php
         'accessKeySecret' => env('VOD_ACCESS_KEY_SECRET'),
     ],
 ```
-src/ServiceProvider.php
-```shell
-<?php
-    namespace Jameswang\Vod;
-    
-    class ServiceProvider
-    {
-        protected $defer = true;
-    
-        public function register()
-        {
-            $this->app->singleton(Vod::class, function(){
-                return new Vod(config('services.aliyun-vod'));
-            });
-    
-            $this->app->alias(Vod::class, 'aliyun-vod');
-        }
-    
-        public function provides()
-        {
-            return [Vod::class, 'aliyun-vod'];
-        }
-
-```
 
 使用
 ```shell
