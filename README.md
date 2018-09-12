@@ -56,6 +56,9 @@ $result = $vod->oss_upload_video($arg,$path);
 
 //只获取上传凭证
 $result = $vod->reserve_upload_video($arg);
+
+//获取播放凭证
+//$result = $vod->get_play_video('xxxxx81f25e6490d9d76ec7101axxxxx');
 ```
 
 ##Laravel 引入方式 
@@ -78,21 +81,37 @@ use Jameswang\Vod\Vod;
 class Reserve
 {
 
-     public function reserveVideo(Vod $vod)
+     private $vod;
+    
+     public function __construct(Vod $vod)
+     {
+        $this->vod = $vod;
+     }
+    
+     public function reserveVideo($arg)
      {
          // $arg['title']        // 视频标题(必填参数)
          // $arg['file_name']    // 视频源文件名称，必须包含扩展名(必填参数)
          // $arg['description']  // 视频源文件描述(可选);
          // $arg['cover_url']    // 自定义视频封面(可选)
          // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
-
-         $arg['title'] = 'demo';
-         $arg['file_name'] = 'demo.mp4';
-         $res = $vod->reserve_upload_video($arg);
+         //$arg['title'] = 'demo';
+         //$arg['file_name'] = 'demo.mp4';
+         
+         $res = $this->vod->reserve_upload_video($arg);
 
          return $res;
 
      }
+     
+     //获取播放凭证
+     public function getPlayVideo($video_id)
+     {
+          
+          $result = $this->vod->get_play_video($video_id);
+          return $result;
+     }
+     
 
 
 }

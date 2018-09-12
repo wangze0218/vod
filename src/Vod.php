@@ -51,4 +51,12 @@ class Vod
         $result = $oss::upload_local_file($uploadAddress['Bucket'], $uploadAddress['FileName'], $localFilePath);
         return $result;
     }
+
+    //$video_id
+    public function get_play_video($video_id)
+    {
+        $video = new GetPlayVideo($this->accessKeyId,$this->accessKeySecret);
+        $res = $video->boot($video_id);
+        return $res;
+    }
 }

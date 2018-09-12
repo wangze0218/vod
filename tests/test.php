@@ -24,7 +24,15 @@ $vod = new Vod($config);
 // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
 $arg['title'] = '';
 $arg['file_name'] = '';
-$result = $vod->upload_video($arg,$path);
+//只获取上传凭证
+//$result = $vod->reserve_upload_video($arg);
+//注册带上传
+//$result = $vod->oss_upload_video($arg,$path);
+
+//获取播放凭证
+//$result = $vod->get_play_video('xxxxx81f25e6490d9d76ec7101axxxxx');
+
+
 
 echo '<pre>';
 var_dump($result);
