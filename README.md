@@ -108,8 +108,8 @@ class Reserve
      public function getPlayVideo($video_id)
      {
           
-          $result = $this->vod->get_play_video($video_id);
-          return $result;
+          $res = $this->vod->get_play_video($video_id);
+          return $res;
      }
      
 
