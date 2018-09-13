@@ -6,8 +6,8 @@
  * Time: 上午11:40
  */
 
-namespace Jameswang\Vod;
-require_once __DIR__.'/aliyun-php-sdk/aliyun-php-sdk-core/Config.php';   // 假定您的源码文件和aliyun-php-sdk处于同一目录
+namespace Jameswang\Vod\Boot;
+require_once __DIR__ . '../aliyun-php-sdk/aliyun-php-sdk-core/Config.php';   // 假定您的源码文件和aliyun-php-sdk处于同一目录
 use vod\Request\V20170321 as vod;
 use Jameswang\Vod\Video;
 
