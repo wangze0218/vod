@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6a9e928-ddb3-4777-9a03-8995efae73f8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/boot/DeleteVideos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boot/GetPlayInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boot/GetVideoInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boot/RefreshUpdateVideo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/boot/UpdateVideoInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateUpoadVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/CreateUpoadVideo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GetPlayVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/GetPlayVideo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vod.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Vod.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vod.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vod.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+            <state relative-caret-position="-212">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
                 <element signature="e#113#149#0#PHP" expanded="true" />
               </folding>
@@ -35,23 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteVideos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boot/DeleteVideos.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#230#263#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateVideoInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boot/UpdateVideoInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="62" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -74,6 +56,7 @@
         <option value="$PROJECT_DIR$/src/boot/UpdateVideoInfo.php" />
         <option value="$PROJECT_DIR$/src/boot/DeleteVideos.php" />
         <option value="$PROJECT_DIR$/src/Vod.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -158,12 +141,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536808814182</updated>
-      <workItem from="1536808815626" duration="2099000" />
+      <workItem from="1536808815626" duration="2382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2099000" />
+    <option name="totallyTimeSpent" value="2382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -255,13 +238,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="280">
+            <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+        <state relative-caret-position="-212">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
           <folding>
             <element signature="e#113#149#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
