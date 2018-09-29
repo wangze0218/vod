@@ -21,11 +21,14 @@ class Vod
 {
     private $accessKeyId;
     private $accessKeySecret;
+    private $securityToken = null;
 
     public function __construct($config)
     {
         $this->accessKeyId = $config['accessKeyId'];
         $this->accessKeySecret = $config['accessKeySecret'];
+        if(isset($config['securityToken'])) $this->securityToken = $config['securityToken'];
+
     }
 
     // $arg['title']        // 视频标题(必填参数)
@@ -35,7 +38,7 @@ class Vod
     // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
     public function reserve_upload_video($arg)
     {
-        $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret);
+        $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $upload_mes = $video->boot($arg);
 
         return $upload_mes;
@@ -48,7 +51,7 @@ class Vod
     // $arg['tag']          // 视频标签，多个用逗号分隔(可选)
     public function oss_upload_video($arg,$localFilePath)
     {
-        $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret);
+        $video = new CreateUpoadVideo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $upload_mes = $video->boot($arg);
 
         $uploadAddress = json_decode(base64_decode($upload_mes->UploadAddress),1);
@@ -63,7 +66,7 @@ class Vod
     // 获取播放凭证
     public function get_play_video($video_id)
     {
-        $video = new GetPlayVideo($this->accessKeyId,$this->accessKeySecret);
+        $video = new GetPlayVideo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $res = $video->boot($video_id);
         return $res;
     }
@@ -71,7 +74,7 @@ class Vod
     // 获取播放地址
     public function get_play_info($video_id)
     {
-        $video = new GetPlayInfo($this->accessKeyId,$this->accessKeySecret);
+        $video = new GetPlayInfo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $res = $video->boot($video_id);
         return $res;
     }
@@ -79,7 +82,7 @@ class Vod
     // 刷新上传凭证
     public function refresh_update_video($video_id)
     {
-        $video = new RefreshUpdateVideo($this->accessKeyId,$this->accessKeySecret);
+        $video = new RefreshUpdateVideo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $res = $video->boot($video_id);
         return $res;
     }
@@ -92,7 +95,7 @@ class Vod
     // $arg['cate_id']      // 更改视频分类(可在点播控制台·全局设置·分类管理里查看分类ID
     public function update_video_info($video_id,$arg)
     {
-        $video = new UpdateVideoInfo($this->accessKeyId,$this->accessKeySecret);
+        $video = new UpdateVideoInfo($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $res = $video->boot($video_id,$arg);
         return $res;
     }
@@ -100,7 +103,7 @@ class Vod
     // 删除视频
     public function delete_videos($video_ids)
     {
-        $video = new DeleteVideos($this->accessKeyId,$this->accessKeySecret);
+        $video = new DeleteVideos($this->accessKeyId,$this->accessKeySecret,$this->securityToken);
         $res = $video->boot($video_ids);
         return $res;
     }

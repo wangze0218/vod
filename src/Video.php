@@ -17,14 +17,14 @@ abstract class Video
 {
     protected $client;
 
-    public function __construct($accessKeyId, $accessKeySecret)
+    public function __construct($accessKeyId, $accessKeySecret, $securityToken)
     {
-        $this->client = $this->init_vod_client($accessKeyId, $accessKeySecret);
+        $this->client = $this->init_vod_client($accessKeyId, $accessKeySecret, $securityToken);
     }
 
-    private function init_vod_client($accessKeyId, $accessKeySecret) {
+    private function init_vod_client($accessKeyId, $accessKeySecret, $securityToken) {
         $regionId = 'cn-shanghai';  // 点播服务所在的Region，国内请填cn-shanghai，不要填写别的区域
-        $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret);
+        $profile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessKeySecret, $securityToken);
         return new DefaultAcsClient($profile);
     }
 
